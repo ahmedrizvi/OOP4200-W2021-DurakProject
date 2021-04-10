@@ -82,5 +82,16 @@ namespace DurakLibrary
         public static bool operator >=(PlayingCard left, PlayingCard right) => left.CardValue >= right.CardValue;
 
         private PlayingCard(string fromString) => throw new NotImplementedException();
+
+        public Image GetCardImage()
+        {
+            string imageName;
+            Image cardImage;
+      
+            imageName = mySuit.ToString() + "_" + myRank.ToString();
+            cardImage =  DurakLibrary.Properties.Resources.ResourceManager.GetObject(imageName) as Image;
+
+            return cardImage;
+        }
     }
 }
