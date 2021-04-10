@@ -10,7 +10,7 @@ namespace DurakLibrary
         protected CardRank myRank;
         protected int myValue;
         protected int? altValue;
-        protected bool faceUp;
+        protected bool faceup;
 
         public CardSuit Suit
         {
